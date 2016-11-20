@@ -2,8 +2,6 @@
 # After the first "pip install -r", just run "pip freeze" and add the version
 # to each package in each requirements/*.txt.
 
-Django==1.10.2
-django-rest-swagger==2.0.6
-
-# rest framework from master
--e git+https://github.com/tomchristie/django-rest-framework.git@de08f28a9185c09667eace53b637b1cb4529c695#egg=rest_framework
+Django==1.10.3
+django-rest-swagger==2.0.7
+djangorestframework==3.5.3

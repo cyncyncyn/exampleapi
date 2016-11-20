@@ -8,6 +8,8 @@ root = lambda *x: os.path.join(BASE_DIR, *x)
 
 sys.path.insert(0, root('apps'))
 
+DEBUG = True
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'CHANGE THIS!!!'
@@ -32,8 +34,7 @@ INSTALLED_APPS = [
 ]
 
 PROJECT_APPS = [
-    'news',
-    'tags'
+    'characters'
 ]
 
 INSTALLED_APPS += PROJECT_APPS
@@ -129,6 +130,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+SWAGGER_SETTINGS = {
+    'basePath': '/',
+    'host': 'localhost:8000'
+}
+
 
 
 # .local.py overrides all the common settings.
