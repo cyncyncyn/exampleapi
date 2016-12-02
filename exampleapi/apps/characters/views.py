@@ -5,8 +5,8 @@ from django.shortcuts import render
 from rest_framework.generics import (ListCreateAPIView,
                                      RetrieveUpdateDestroyAPIView)
 
-from .models import Character, Photo
-from .serializers import CharacterSerializer, PhotoSerializer
+from .models import Character
+from .serializers import CharacterSerializer
 
 
 class CharacterList(ListCreateAPIView):
@@ -17,13 +17,3 @@ class CharacterList(ListCreateAPIView):
 class CharacterDetail(RetrieveUpdateDestroyAPIView):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
-
-
-class PhotoList(ListCreateAPIView):
-    queryset = Photo.objects.all()
-    serializer_class = PhotoSerializer
-
-
-class PhotoDetail(RetrieveUpdateDestroyAPIView):
-    queryset = Photo.objects.all()
-    serializer_class = PhotoSerializer
